@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InterferometerWidget</class>
+ <widget class="QMainWindow" name="InterferometerWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>InterferometerWidget</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>651</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabBar::tab{width:100}
+QTabBar::tab{height:30}
+QTabBar::tab{font: 12pt &quot;Cascadia Code&quot;}
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="tab_Setup">
+     <attribute name="title">
+      <string>Setup</string>
+     </attribute>
+     <widget class="QFrame" name="frame_Connect">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>1161</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="led_LocalIP">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>10</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>192.168.1.103</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Self">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Local Address:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Target">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Target Address:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_TargetIP">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>80</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>192.168.1.101</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Hostport">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>150</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Local Port:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_Localport">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>150</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>8000</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Dstport">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>220</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Target port:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_Targetport">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>220</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>5000</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_AxisNum">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>290</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_AxisNum">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>290</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>AxisNumber:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_Connect">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>10</y>
+         <width>131</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Connect</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_Disconnect">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>10</y>
+         <width>131</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Disconnect</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_Frequency">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>360</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1000</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Frequency">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>360</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Frequency: [1/s]</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_CollectNum">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>430</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>200</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_CollectNum">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>430</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CollectNumber</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Transfer">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>500</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TransferCoefficient</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_Transfer">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>500</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>0.309</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_Result">
+     <attribute name="title">
+      <string>Result</string>
+     </attribute>
+     <widget class="QFrame" name="frame_Result">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>1101</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="led_Pos1">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>20</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Pos1">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>20</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Position 1:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_Pos2">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>90</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Pos2">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>90</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Position 2:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_Pos3">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>160</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Pos3">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>160</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Position 3:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Pos4">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>230</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Position 4:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_Pos4">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>230</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Pos5">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>300</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Position 5:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_Pos5">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>300</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_AvePos1">
+       <property name="geometry">
+        <rect>
+         <x>860</x>
+         <y>20</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_AvePos1">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>20</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>AveragePos 1:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_AvePos2">
+       <property name="geometry">
+        <rect>
+         <x>860</x>
+         <y>90</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_AvePos2">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>90</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>AveragePos 2:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_Stop">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>470</y>
+         <width>131</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Stop</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_Start">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>470</y>
+         <width>131</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Start</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_SetZero">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>470</y>
+         <width>131</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SetZero</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_OriginalPos4">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>230</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OriginalPos 4:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_OriginalPos3">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>160</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_OriginalPos1">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OriginalPos 1:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_OriginalPos2">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>90</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OriginalPos 2:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_OriginalPos5">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>300</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_OriginalPos2">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>90</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_OriginalPos4">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>230</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_OriginalPos5">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>300</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OriginalPos 5:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_OriginalPos1">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>20</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_OriginalPos3">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>160</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OriginalPos 3:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_OriginalPos6">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>370</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OriginalPos 6:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_OriginalPos6">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>370</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_Pos6">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>370</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Pos6">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>370</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Position 6:</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
